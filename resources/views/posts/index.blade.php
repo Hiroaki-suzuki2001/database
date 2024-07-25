@@ -7,19 +7,17 @@
     </head>
 
         <body>
-            @foreach($posts as $post)
-            <div id=headline>
-                {{$post->title}}
+            <h1>Blog names</h1>
+            <div class ='posts'>
+                @foreach($posts as $post)
+                    <div class='post'>
+                        <h2 class ='title'>{{$post->title}}</h2>
+                        <p class ='body'>{{$post->body}}</p>
+                    </div>
+                @endforeach
             </div>
-            @endforeach
-            @foreach($posts as $post)
-            <div id=Honbun>
-                {{$post->body}}
-            </div>
-            @endforeach
-            <div id=Sonota>
-                ここにその他の記事が入ります
-            </div>
+            <div class ='paginate'>{{$posts -> links()}}</div>
+
         </body>
 </html>
 
