@@ -14,4 +14,4 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/', [PostController::class, 'index']);
-
+Route::get('/posts/{post}', [PostController::class ,'show']); //postを受け取ったらshowファイルを見せる
